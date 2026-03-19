@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+
+<!-- Perplexity Computer Attribution — SEO Meta Tags -->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Longevity Interventions — Hype vs Evidence Dashboard</title>
+<meta name="description" content="A rigorous evidence-based dashboard scoring longevity interventions by mechanism, clinical stage, biomarker relevance, safety, and cost.">
+
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=cabinet-grotesk@500,700,800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-label="Longevity Dashboard Logo">
+          <circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M8 18 C8 10, 14 6, 20 10" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <circle cx="20" cy="10" r="2.5" fill="var(--color-accent)"/>
+        </svg>
+        <span class="logo-text">Longevity Scorecard</span>
+      </div>
+      <nav class="header-nav">
+        <span class="header-tag">Updated March 2026</span>
+        <button data-theme-toggle aria-label="Switch to light mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Hype vs Evidence</h1>
+      <p class="hero-sub">A rigorous scorecard of longevity interventions — from first-in-human gene therapies to influencer-grade supplements. Every claim scored on mechanism, clinical stage, biomarkers, safety, and cost.</p>
+    </div>
+  </section>
+
+  <!-- FILTERS -->
+  <section class="filters-section">
+    <div class="filters-inner">
+      <div class="filter-group">
+        <label>Category</label>
+        <div class="filter-pills" data-filter="category">
+          <button class="pill active" data-value="all">All</button>
+          <button class="pill" data-value="reprogramming">Reprogramming</button>
+          <button class="pill" data-value="senolytic">Senolytics</button>
+          <button class="pill" data-value="pharmacological">Pharmacological</button>
+          <button class="pill" data-value="supplement">Supplements</button>
+          <button class="pill" data-value="lifestyle">Lifestyle</button>
+        </div>
+      </div>
+      <div class="filter-group">
+        <label>Availability</label>
+        <div class="filter-pills" data-filter="availability">
+          <button class="pill active" data-value="all">All</button>
+          <button class="pill" data-value="try-now">Can Try Now</button>
+          <button class="pill" data-value="clinical">In Clinical Trials</button>
+          <button class="pill" data-value="preclinical">Preclinical / Press Release</button>
+        </div>
+      </div>
+      <div class="filter-group">
+        <label>Sort by</label>
+        <select id="sort-select">
+          <option value="composite">Composite Score</option>
+          <option value="mechanism">Mechanism Strength</option>
+          <option value="clinical">Clinical Stage</option>
+          <option value="biomarker">Biomarker Relevance</option>
+          <option value="safety">Safety Profile</option>
+          <option value="cost">Cost Accessibility</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- KPI STRIP -->
+  <section class="kpi-strip">
+    <div class="kpi-inner">
+      <div class="kpi-card">
+        <span class="kpi-value" id="kpi-total">0</span>
+        <span class="kpi-label">Interventions Tracked</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-value" id="kpi-human">0</span>
+        <span class="kpi-label">In Human Trials</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-value" id="kpi-tryable">0</span>
+        <span class="kpi-label">Available Now</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-value" id="kpi-theater">0</span>
+        <span class="kpi-label">Influencer Theater</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN GRID -->
+  <main class="main-grid">
+    <!-- INTERVENTION CARDS -->
+    <section class="cards-section">
+      <div class="cards-header">
+        <h2>Intervention Scorecard</h2>
+        <span class="cards-count" id="cards-count"></span>
+      </div>
+      <div class="cards-grid" id="cards-grid"></div>
+    </section>
+
+    <!-- SIDEBAR CHARTS -->
+    <aside class="sidebar">
+      <div class="chart-card">
+        <h3>Clinical Stage Distribution</h3>
+        <canvas id="chart-stage" height="220"></canvas>
+      </div>
+      <div class="chart-card">
+        <h3>Category Breakdown</h3>
+        <canvas id="chart-category" height="220"></canvas>
+      </div>
+      <div class="chart-card">
+        <h3>Composite Score vs Cost</h3>
+        <canvas id="chart-scatter" height="260"></canvas>
+      </div>
+      <div class="chart-card spotlight-card">
+        <h3>Spotlight: Life Biosciences ER-100</h3>
+        <div class="spotlight-body">
+          <div class="spotlight-badge">Phase 1 — First-in-Human</div>
+          <p>The first-ever cellular rejuvenation therapy using partial epigenetic reprogramming to receive <strong>FDA IND clearance</strong> (Jan 28, 2026). Targets optic neuropathies (glaucoma, NAION) via AAV-delivered OSK factors with doxycycline-controlled expression.</p>
+          <ul>
+            <li>Trial: NCT07290244 — up to 12 patients</li>
+            <li>8-week doxycycline activation window</li>
+            <li>5-year safety follow-up planned</li>
+            <li>NHP data: restored methylation patterns, improved visual function via pERG</li>
+          </ul>
+          <div class="spotlight-links">
+            <a href="https://clinicaltrials.gov/study/NCT07290244" target="_blank" rel="noopener">ClinicalTrials.gov</a>
+            <a href="https://www.lifebiosciences.com/life-biosciences-announces-fda-clearance-of-ind-application-for-er-100-in-optic-neuropathies/" target="_blank" rel="noopener">Life Bio Press Release</a>
+          </div>
+        </div>
+      </div>
+      <div class="chart-card spotlight-card">
+        <h3>Spotlight: MDI-2517 (Juvenescence)</h3>
+        <div class="spotlight-body">
+          <div class="spotlight-badge">Phase 1 Complete → Phase 2 in 2026</div>
+          <p>PAI-1 inhibitor backed by human genetic evidence linking reduced PAI-1 levels to <strong>~10-year lifespan extension</strong>. Successfully completed Phase 1 (Feb 2026) with good safety/tolerability.</p>
+          <ul>
+            <li>Targets metabolic and fibrotic disorders</li>
+            <li>MDI Therapeutics: $9.6M raised, NIH-backed</li>
+            <li>Juvenescence portfolio: cardiovascular, muscle wasting, RA</li>
+            <li>Phase 2 PoC planned H2 2026</li>
+          </ul>
+          <div class="spotlight-links">
+            <a href="https://finance.yahoo.com/news/juvenescence-successfully-completes-phase-1-120000541.html" target="_blank" rel="noopener">Yahoo Finance</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- DETAILED TABLE -->
+  <section class="table-section">
+    <h2>Full Evidence Matrix</h2>
+    <div class="table-wrap">
+      <table id="evidence-table">
+        <thead>
+          <tr>
+            <th>Intervention</th>
+            <th>Category</th>
+            <th>Stage</th>
+            <th>Mechanism</th>
+            <th>Clinical</th>
+            <th>Biomarkers</th>
+            <th>Safety</th>
+            <th>Cost</th>
+            <th>Composite</th>
+            <th>Verdict</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- METHODOLOGY -->
+  <section class="methodology">
+    <div class="methodology-inner">
+      <h2>Scoring Methodology</h2>
+      <div class="method-grid">
+        <div class="method-card">
+          <h4>Mechanism (0–10)</h4>
+          <p>Strength of the biological rationale. Genetic validation in humans, known pathway, published MOA. Demerits for hand-waving about "cellular health" without specifics.</p>
+        </div>
+        <div class="method-card">
+          <h4>Clinical Stage (0–10)</h4>
+          <p>10 = FDA-approved for any indication. 8 = Phase 2/3 human data. 6 = Phase 1. 4 = Preclinical (NHP). 2 = Mouse only. 0 = No animal data / in vitro only.</p>
+        </div>
+        <div class="method-card">
+          <h4>Biomarker Relevance (0–10)</h4>
+          <p>Are validated aging biomarkers moving? Epigenetic clocks, p16/p21 senescence markers, NAD+ levels, inflammatory panels (IL-6, TNF-α), telomere length. More validated endpoints = higher score.</p>
+        </div>
+        <div class="method-card">
+          <h4>Safety Profile (0–10)</h4>
+          <p>10 = Generally recognized as safe, decades of data. 7 = FDA-approved drug with known side effect profile. 4 = Early human safety data. 1 = Theoretical safety concerns (oncogenesis, immunosuppression).</p>
+        </div>
+        <div class="method-card">
+          <h4>Cost Accessibility (0–10)</h4>
+          <p>10 = Free or &lt;$10/month. 7 = $10–100/month. 4 = $100–500/month. 2 = Requires prescription + monitoring. 0 = Experimental only / not accessible.</p>
+        </div>
+        <div class="method-card">
+          <h4>Composite Score</h4>
+          <p>Weighted average: Mechanism (25%) + Clinical Stage (25%) + Biomarkers (20%) + Safety (15%) + Cost (15%). Maximum 10.0. Color-coded: green ≥7, yellow 4–7, red &lt;4.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOURCES -->
+  <section class="sources-section">
+    <div class="sources-inner">
+      <h2>Key Sources &amp; References</h2>
+      <div class="sources-grid">
+        <div class="source-group">
+          <h4>Cellular Reprogramming</h4>
+          <ul>
+            <li><a href="https://clinicaltrials.gov/study/NCT07290244" target="_blank">Life Biosciences ER-100 Phase 1 Trial — ClinicalTrials.gov</a></li>
+            <li><a href="https://www.lifebiosciences.com/life-biosciences-announces-fda-clearance-of-ind-application-for-er-100-in-optic-neuropathies/" target="_blank">Life Bio IND Clearance — Jan 2026</a></li>
+            <li><a href="https://www.labiotech.eu/best-biotech/anti-aging-biotech-companies/" target="_blank">Anti-aging biotech companies in 2026 — Labiotech</a></li>
+            <li><a href="https://doi.org/10.18632/aging.204896" target="_blank">Sinclair et al. — Chemical reprogramming to reverse cellular aging (Aging, 2023)</a></li>
+            <li><a href="https://doi.org/10.7554/eLife.90579" target="_blank">Mitchell et al. — Multi-omics of chemical reprogramming (eLife, 2024)</a></li>
+            <li><a href="https://doi.org/10.1016/j.cell.2025.07.031" target="_blank">Belmonte et al. — Mesenchymal drift reversed by reprogramming (Cell, 2025)</a></li>
+          </ul>
+        </div>
+        <div class="source-group">
+          <h4>Senolytics</h4>
+          <ul>
+            <li><a href="https://doi.org/10.1016/j.ebiom.2019.08.069" target="_blank">Hickson et al. — D+Q in diabetic kidney disease (EBioMedicine, 2019)</a></li>
+            <li><a href="https://doi.org/10.1016/j.ebiom.2023.104481" target="_blank">D+Q in IPF: Phase I RCT (EBioMedicine, 2023)</a></li>
+            <li><a href="https://doi.org/10.1093/geroni/igaf122.1102" target="_blank">Orr — Senolytics in AD: SToMP-AD &amp; STAMINA trials (2025)</a></li>
+            <li><a href="https://doi.org/10.1111/acel.14489" target="_blank">Farr et al. — Senescent cell biomarkers for clinical trials (Aging Cell, 2024)</a></li>
+          </ul>
+        </div>
+        <div class="source-group">
+          <h4>Pharmacological Agents</h4>
+          <ul>
+            <li><a href="https://finance.yahoo.com/news/juvenescence-successfully-completes-phase-1-120000541.html" target="_blank">Juvenescence MDI-2517 Phase 1 completion — Feb 2026</a></li>
+            <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12226543/" target="_blank">Rapamycin for longevity — Frontiers in Aging (2025)</a></li>
+            <li><a href="https://www.afar.org/tame-trial" target="_blank">TAME Trial — Targeting Aging with Metformin (AFAR)</a></li>
+          </ul>
+        </div>
+        <div class="source-group">
+          <h4>Supplements &amp; Lifestyle</h4>
+          <ul>
+            <li><a href="https://www.nmn.com/news/scientists-unveil-results-from-human-trial-directly-comparing-three-nad-precursors" target="_blank">NMN vs NR head-to-head — Nature Metabolism (2026)</a></li>
+            <li><a href="https://doi.org/10.1001/jamainternmed.2014.8187" target="_blank">Laukkanen et al. — Sauna &amp; CVD mortality (JAMA Int Med, 2015)</a></li>
+            <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6262976/" target="_blank">Sauna bathing &amp; CVD mortality — BMC Medicine (2018)</a></li>
+            <li><a href="https://doi.org/10.1016/j.lfs.2025.123404" target="_blank">Cold exposure &amp; aging review (Life Sciences, 2025)</a></li>
+            <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9273773/" target="_blank">Cold exposure &amp; BAT activity meta-analysis (Frontiers Physiology, 2022)</a></li>
+          </ul>
+        </div>
+        <div class="source-group">
+          <h4>Market &amp; Company Data</h4>
+          <ul>
+            <li>PitchBook: Altos Labs ($3B+ funding, 500 employees, PE-backed), Retro Biosciences ($1.18B raised, clinical-stage), MDI Therapeutics ($9.6M, Phase 1)</li>
+            <li>Statista: China anti-aging market ¥73.98B (2023) → ¥103.75B (2027 est.)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Data compiled from ClinicalTrials.gov, PubMed, PitchBook, Statista, company press releases, and peer-reviewed literature. Scores reflect publicly available evidence as of March 2026. This is not medical advice.</p>
+    <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+  </footer>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
