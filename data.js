@@ -1,4 +1,4 @@
-// Longevity Interventions Database — March 2026
+// Longevity Interventions Database — March 2026 (Updated March 23, 2026)
 // Scores: 0-10 scale per dimension
 // Composite = Mechanism(0.25) + Clinical(0.25) + Biomarker(0.20) + Safety(0.15) + Cost(0.15)
 
@@ -18,12 +18,12 @@ const INTERVENTIONS = [
     safety: 4,
     cost: 0,
     mechanismNote: "Partial epigenetic reprogramming via OSK (Oct4/Sox2/Klf4) delivered by AAV. Doxycycline-inducible on/off switch. Restores youthful DNA methylation without full dedifferentiation.",
-    clinicalNote: "FDA IND cleared Jan 2026. Phase 1 enrolling glaucoma (OAG) + NAION patients. NCT07290244. Up to 12 patients, dose escalation design.",
+    clinicalNote: "FDA IND cleared Jan 2026. Phase 1 dosing underway: sentinel patient enrolled with 28-day monitoring before next cohort. Data readout expected Q4 2026 (BIO Investment Summit). NCT07290244. Dose escalation in OAG, then expansion in NAION.",
     biomarkerNote: "NHP data: restored methylation patterns, pERG improvement (visual function). Epigenetic clock reversal in preclinical models.",
     safetyNote: "Novel gene therapy modality — long-term oncogenesis risk unknown. Doxycycline control is a safety feature. 5-year follow-up planned.",
     costNote: "Experimental only. Gene therapy pricing likely >$100K if approved.",
     verdict: "Landmark — the first reprogramming therapy in humans. Incredible science, but years from consumer relevance.",
-    sources: ["ClinicalTrials.gov NCT07290244", "Life Biosciences Press Release Jan 2026", "NAD.com Jan 2026"]
+    sources: ["ClinicalTrials.gov NCT07290244", "Life Biosciences Press Release Jan 2026", "Nature Biotechnology Feb 2026", "BIO Investment Summit Mar 2026: Q4 data readout", "Lifespan.io Feb 2026"]
   },
   {
     id: "altos",
@@ -39,7 +39,7 @@ const INTERVENTIONS = [
     safety: 3,
     cost: 0,
     mechanismNote: "Cellular rejuvenation via reprogramming. Belmonte lab Cell 2025 paper showed partial reprogramming reverses mesenchymal drift. Oct 2025: gene silencing prevents cellular drift.",
-    clinicalNote: "No clinical trials announced. $3B+ funded, 500 employees. Appointed CMO Joan Mannick (mTOR expert). Research-phase focus.",
+    clinicalNote: "No clinical trials announced. $3B+ funded, 500 employees. CMO Joan Mannick (mTOR expert) in place. Oct 2025 Cell paper: gene silencing prevents cellular drift. Launched Institute of Computation for AI-guided reprogramming. Reportedly seeking to raise $1B additional.",
     biomarkerNote: "Published epigenetic clock reversal in multiple in vivo models. Computational models for cellular resilience.",
     safetyNote: "Same class-wide oncogenesis concerns as all reprogramming approaches. No human safety data.",
     costNote: "Not accessible. Research institution only.",
@@ -59,13 +59,13 @@ const INTERVENTIONS = [
     biomarker: 7,
     safety: 4,
     cost: 0,
-    mechanismNote: "Dual approach: cellular reprogramming + autophagy activation. Partnered with OpenAI to engineer RetroSOX/RetroKLF variants (50x higher reprogramming markers). RTR242 autophagy drug in Phase 1.",
-    clinicalNote: "Became clinical-stage in 2025 with RTR242 Phase 1 dosing. First trial expected from autophagy program. $1.18B raised (PitchBook).",
+    mechanismNote: "Dual approach: cellular reprogramming + autophagy activation. Partnered with OpenAI to engineer RetroSOX/RetroKLF variants (50x higher reprogramming markers). RTR242 restores lysosomal function to reactivate cellular cleanup machinery.",
+    clinicalNote: "RTR242 Phase 1 first-in-human trial initiated Feb 2026 in Australia. Randomized, double-blind, placebo-controlled in healthy volunteers. Includes exploratory autophagy/lysosomal biomarkers. $1.18B raised (PitchBook).",
     biomarkerNote: "AI-designed Yamanaka factor variants showed improved reprogramming markers in vitro. Autophagy biomarkers being tracked.",
     safetyNote: "RTR242 safety data pending from Phase 1. Autophagy modulation is less risky than direct reprogramming.",
     costNote: "Experimental only.",
     verdict: "Sam Altman–backed moonshot with real clinical progress. The AI-engineered factors are genuinely novel.",
-    sources: ["PitchBook: Retro $1.18B", "Labiotech Mar 2026", "FT Jan 2026"]
+    sources: ["PitchBook: Retro $1.18B", "Labiotech Mar 2026", "FT Jan 2026", "Fight Aging Jan 2026: RTR242 Phase 1 details"]
   },
   {
     id: "chemical-reprog",
@@ -104,12 +104,12 @@ const INTERVENTIONS = [
     safety: 6,
     cost: 3,
     mechanismNote: "First-generation senolytic. Dasatinib (tyrosine kinase inhibitor) + quercetin (flavonoid) transiently disable senescent cell anti-apoptotic pathways (SCAPs). Hit-and-run dosing — half-lives <11 hours.",
-    clinicalNote: "Phase 1 completed in diabetic kidney disease (reduced adipose senescent cells). Phase 1 in IPF (improved physical function). SToMP-AD and STAMINA trials in cognitive decline. Phase 2 AD trial underway.",
+    clinicalNote: "Phase 1 completed in diabetic kidney disease (reduced adipose senescent cells). Phase 1 in IPF (improved physical function). SToMP-AD and STAMINA trials in cognitive decline. Phase 2 AD trial underway. NEW: Mayo Clinic Phase I trial (NCT07025226) combining D+Q+fisetin+temozolomide for glioma.",
     biomarkerNote: "Reduced p16/p21+ cells, SA-β-gal activity, circulating SASP factors (IL-1α, IL-6, MMP-9/12). CSF dasatinib penetrance confirmed (80% in SToMP-AD).",
-    safetyNote: "Dasatinib is FDA-approved for CML — known side effect profile (cytopenia, fluid retention, QT prolongation). Intermittent dosing mitigates chronic toxicity. Quercetin is GRAS.",
+    safetyNote: "Dasatinib is FDA-approved for CML — known side effect profile (cytopenia, fluid retention, QT prolongation). Intermittent dosing mitigates chronic toxicity. Quercetin is GRAS. CAUTION: Aging Cell 2026 mouse study — D+Q before flu vaccination did NOT improve immune response and may impair CD8 T cell viral clearance.",
     costNote: "Dasatinib requires prescription. Quercetin OTC (~$20/mo). Some longevity clinics prescribe D+Q off-label ($200-500/cycle).",
     verdict: "The most clinically validated senolytic combination. Real human data across multiple indications. Dasatinib Rx requirement is the barrier.",
-    sources: ["Hickson et al. EBioMedicine 2019", "EBioMedicine IPF Phase 1 2023", "Orr — SToMP-AD/STAMINA 2025"]
+    sources: ["Hickson et al. EBioMedicine 2019", "EBioMedicine IPF Phase 1 2023", "Orr — SToMP-AD/STAMINA 2025", "Aging Cell Jan 2026: D+Q flu vaccine study (mixed)", "NCT07025226: D+Q+fisetin glioma trial"]
   },
   {
     id: "fisetin",
@@ -125,33 +125,33 @@ const INTERVENTIONS = [
     safety: 7,
     cost: 9,
     mechanismNote: "Naturally occurring flavonoid with senolytic activity. Selectively induces apoptosis in senescent cells. Reduced AF susceptibility in aged rabbits (Heart Rhythm, 2026). Anti-inflammatory and neuroprotective.",
-    clinicalNote: "Pilot PK/safety trial underway in healthy volunteers and multimorbid elderly (NCT06431932). Multiple Mayo Clinic-led trials. No Phase 2 efficacy data yet.",
+    clinicalNote: "Pilot PK/safety trial underway in healthy volunteers and multimorbid elderly (NCT06431932). Multiple Mayo Clinic-led trials. NEW: Phase I glioma trial (NCT07025226) combining fisetin with D+Q and temozolomide — first oncology application of senolytics. No Phase 2 standalone efficacy data yet.",
     biomarkerNote: "Reduced p16/p21+ cells in animal models. Decreased senescent cell burden in rhesus monkeys (with D). PK data being collected in ongoing human trial.",
     safetyNote: "Naturally occurring in strawberries. OTC supplement. Low oral bioavailability (7.8-31.7%). No serious adverse events reported in animal studies.",
     costNote: "OTC supplement: $15-40/month. Widely available. No prescription needed.",
     verdict: "Best risk/reward for the self-experimenter. Cheap, safe, genuinely senolytic — but human efficacy data is still thin.",
-    sources: ["Sengun et al. Heart Rhythm 2026", "NCT06431932", "Colman et al. D+fisetin in NHP"]
+    sources: ["Sengun et al. Heart Rhythm 2026", "NCT06431932", "NCT07025226: glioma senolytic trial", "Colman et al. D+fisetin in NHP"]
   },
   {
     id: "unity-ubx",
     name: "UBX1325 (Unity Biotechnology)",
     category: "senolytic",
-    availability: "clinical",
-    stage: "Phase 2 (Ophthalmology)",
-    stageLabel: "Phase 2",
-    organism: "Human (Phase 2)",
+    availability: "preclinical",
+    stage: "Phase 2b Complete / Company Winding Down",
+    stageLabel: "Winding Down",
+    organism: "Human (Phase 2b Complete)",
     mechanism: 7,
-    clinical: 7,
+    clinical: 3,
     biomarker: 5,
     safety: 5,
     cost: 0,
     mechanismNote: "BCL-xL inhibitor targeting senescent cells in retinal disease. Unity pivoted from UBX0101 (failed Phase 2 in OA) to ophthalmology.",
-    clinicalNote: "Phase 2 trials in diabetic macular edema (DME) and age-related macular degeneration. Earlier OA program (UBX0101) failed Phase 2.",
+    clinicalNote: "ASPIRE Phase 2b complete: UBX1325 non-inferior to aflibercept at 36 weeks in DME. BUT company shutting down operations — entire workforce laid off, evaluating strategic alternatives as of May 2025. Now privately held (PitchBook Feb 2026).",
     biomarkerNote: "Ophthalmology endpoints: visual acuity, retinal thickness. Less focus on systemic aging biomarkers.",
     safetyNote: "BCL-xL inhibitors carry platelet toxicity risk. Intravitreal delivery limits systemic exposure.",
     costNote: "Experimental only.",
-    verdict: "A cautionary tale and a comeback story. The OA failure taught the field a lesson. Ophthalmology pivot is smarter.",
-    sources: ["Unity Biotechnology pipeline", "Labiotech Mar 2026"]
+    verdict: "Positive trial data but a dead company. UBX1325 showed non-inferiority to standard of care in DME, but Unity laid off its entire workforce and is winding down. The science worked; the business didn't.",
+    sources: ["BioSpace May 2025: ASPIRE 36-week results + workforce reduction", "PitchBook: Unity now privately held Feb 2026", "Retinal Physician Apr 2025"]
   },
 
   // === PHARMACOLOGICAL ===
@@ -165,16 +165,16 @@ const INTERVENTIONS = [
     organism: "Human (Approved), Mouse, Rat, NHP, Multiple Species",
     mechanism: 9,
     clinical: 8,
-    biomarker: 8,
+    biomarker: 9,
     safety: 5,
     cost: 4,
     mechanismNote: "mTOR inhibitor. 167-study meta-analysis (Aging Cell, 2025): extends lifespan comparable to dietary restriction. Delays cancer, neurodegeneration, cardiac aging in mice. 9-14% lifespan extension in mice.",
     clinicalNote: "FDA-approved for organ transplant rejection, TSC. Ongoing human longevity trial (PEARL) with positive interim signals. Everolimus (analog) shown to improve immune function in elderly (Mannick et al.).",
-    biomarkerNote: "Modulates mTOR/AMPK/autophagy axis. Reduces age-related pathologies across multiple organ systems. Immune function biomarkers improved in human trials.",
+    biomarkerNote: "Modulates mTOR/AMPK/autophagy axis. NEW: Aging Cell 2026 — first in-vivo human evidence that low-dose rapamycin (1mg/day, 4 months) significantly reduces p21 senescence marker in immune cells. Also reduces DNA damage (gammaH2AX) and mTORC1 hyperactivation in aged immune subsets.",
     safetyNote: "Known immunosuppressant — infections, mouth ulcers, metabolic effects at transplant doses. Low/intermittent dosing for longevity may mitigate. Requires monitoring.",
     costNote: "Generic available. ~$50-150/month for low-dose. Requires prescription and blood monitoring. Available via longevity clinics.",
     verdict: "The best-evidenced pharmacological longevity intervention in existence. The immunosuppression concern is real but manageable at low doses.",
-    sources: ["Frontiers in Aging 2025 Review", "167-study meta-analysis Aging Cell 2025", "Mannick et al. everolimus"]
+    sources: ["Frontiers in Aging 2025 Review", "167-study meta-analysis Aging Cell 2025", "Mannick et al. everolimus", "Kell et al. Aging Cell 2026: p21 reduction in vivo", "Food Med Center review Feb 2026"]
   },
   {
     id: "metformin",
@@ -202,7 +202,7 @@ const INTERVENTIONS = [
     name: "MDI-2517 (PAI-1 Inhibitor, Juvenescence)",
     category: "pharmacological",
     availability: "clinical",
-    stage: "Phase 1 Complete → Phase 2 Planned",
+    stage: "Phase 1 Complete (Jan 2026) → Phase 2 H2 2026",
     stageLabel: "Phase 1 → 2",
     organism: "Human (Phase 1 Complete)",
     mechanism: 8,
@@ -211,12 +211,12 @@ const INTERVENTIONS = [
     safety: 5,
     cost: 0,
     mechanismNote: "Plasminogen Activator Inhibitor-1 (PAI-1) inhibitor. Human genetics: Amish community with PAI-1 loss-of-function mutation live ~10 years longer. PAI-1 elevated in aging, fibrosis, metabolic syndrome.",
-    clinicalNote: "Phase 1 completed Feb 2026 with good safety/tolerability. Phase 2 PoC planned for metabolic/fibrotic diseases in H2 2026. MDI Therapeutics: $9.6M raised.",
+    clinicalNote: "Phase 1 completed Jan 2026: good safety/tolerability, once-daily oral dosing confirmed. Phase 2 PoC planned H2 2026 targeting chronic kidney disease and interstitial lung disease. MDI Therapeutics: $9.6M raised. First-in-class PAI-1 inhibitor.",
     biomarkerNote: "PAI-1 levels directly measurable. Fibrosis and metabolic biomarkers relevant. Human genetic validation is the gold standard.",
     safetyNote: "Phase 1 clean. Unknown long-term effects of chronic PAI-1 inhibition. Bleeding risk theoretical concern.",
     costNote: "Experimental only.",
     verdict: "One of the most genetically validated aging targets. The Amish data is compelling. Phase 2 will be the real test.",
-    sources: ["Yahoo Finance Feb 2026", "PitchBook: MDI Therapeutics", "Juvenescence pipeline"]
+    sources: ["BioSpace Feb 2026", "Longevity.Technology Mar 2026", "PitchBook: MDI Therapeutics", "LinkedIn: Parris Longevity Accelerator Mar 2026"]
   },
   {
     id: "glp1",
@@ -232,12 +232,12 @@ const INTERVENTIONS = [
     safety: 7,
     cost: 3,
     mechanismNote: "GLP-1/GIP receptor agonists. Primary: weight loss, glucose control. Emerging: cardiovascular protection (SELECT trial 20% MACE reduction), potential anti-inflammatory, possible neuroprotective. Not designed as anti-aging but hitting aging hallmarks.",
-    clinicalNote: "Massive Phase 3 programs. SURPASS, STEP, SELECT trials. FDA-approved for obesity and T2D. Being studied for MASH, heart failure, CKD, Alzheimer's.",
+    clinicalNote: "Massive Phase 3 programs. SURPASS, STEP, SELECT trials. FDA-approved for obesity and T2D. Being studied for MASH, heart failure, CKD, Alzheimer's. Microdosing trend: ~1 in 7 users microdosing for longevity/healthspan (Evidation survey Mar 2026). Economist and Science News coverage of off-label longevity use.",
     biomarkerNote: "Weight loss, HbA1c, cardiovascular events, inflammatory markers. Not classic aging biomarkers but addressing metabolic aging.",
     safetyNote: "GI side effects common (nausea, vomiting). Pancreatitis risk. Muscle mass loss concerns. Well-monitored given massive patient exposure.",
     costNote: "$500-1,300/month without insurance. Compounding pharmacies ~$200-400/month. Insurance coverage variable.",
     verdict: "Not designed for longevity but may be the most impactful healthspan drug of the decade. Metabolic benefits are massive and well-proven.",
-    sources: ["SELECT trial results", "FDA approvals 2023-2025"]
+    sources: ["SELECT trial results", "FDA approvals 2023-2025", "Science News Mar 2026: GLP-1 microdosing longevity", "Economist Mar 2026", "JHU meta-analysis Mar 2026: 64 trials"]
   },
 
   // === SUPPLEMENTS ===
@@ -255,12 +255,12 @@ const INTERVENTIONS = [
     safety: 8,
     cost: 6,
     mechanismNote: "NAD+ precursor → Sirtuin activation → improved mitochondrial function. Nature Metabolism 2026: NMN and NR both ~2x circulating NAD+ after 14 days. Gut bacteria convert NMN to nicotinic acid for systemic NAD+ boost.",
-    clinicalNote: "Multiple small human RCTs showing NAD+ elevation. But no RCT has shown lifespan extension or hard clinical endpoints in humans. NAD+ is a surrogate marker.",
+    clinicalNote: "Multiple small human RCTs showing NAD+ elevation. Nature Metabolism 2026 head-to-head: NMN and NR both ~2x NAD+ at 14 days, while nicotinamide (Nam) only works acutely. NMNH (reduced form) triples NAD+ in first human trial (unpublished, 80 adults, 90 days). Still no hard clinical longevity endpoints.",
     biomarkerNote: "Reliably raises blood NAD+ levels ~2-fold. Increases short-chain fatty acids (SCFA). But brain NAD+ not elevated at 8 days. Surrogate, not clinical, endpoints.",
     safetyNote: "Well-tolerated in trials. OTC supplement. No serious adverse events reported. Long-term safety unknown at high doses.",
     costNote: "Quality varies wildly. $40-120/month for 500mg-1g/day from reputable brands.",
     verdict: "Reliably raises NAD+. But NAD+ is a biomarker, not a clinical outcome. The longevity claims outrun the evidence.",
-    sources: ["Nature Metabolism 2026 NMN vs NR", "nmn.com review"]
+    sources: ["Cuenoud et al. Nature Metabolism 2026", "nmn.com review", "NAD.com Jan 2026: NMNH trial results"]
   },
   {
     id: "nr",
@@ -276,12 +276,12 @@ const INTERVENTIONS = [
     safety: 8,
     cost: 6,
     mechanismNote: "NAD+ precursor like NMN. Norway study (2026): NR raised blood NAD+ 2.3x more than NMN at 8 days. After 4 weeks, NR raised brain NAD+ in healthy individuals (not in Parkinson's patients).",
-    clinicalNote: "Lancet eClinicalMedicine 2025: Phase I in Parkinson's — enhanced NAD+ metabolome, upregulated mitochondrial respiration. Multiple other small RCTs. No hard clinical longevity endpoints.",
+    clinicalNote: "Lancet eClinicalMedicine 2025: Phase I in Parkinson's — enhanced NAD+ metabolome, upregulated mitochondrial respiration. Nature Metabolism 2026 head-to-head confirms NR comparable to NMN for NAD+ elevation. Key finding: gut bacteria convert NR to nicotinic acid for systemic NAD+ boost. Also increases short-chain fatty acids (SCFAs).",
     biomarkerNote: "Raises blood NAD+ (possibly more than NMN per Norway study). Brain NAD+ elevation after 4 weeks. Parkinson's trial: improved mitochondrial function markers.",
     safetyNote: "GRAS status (Niagen). Well-tolerated across multiple trials. ChromaDex/Tru Niagen is the main commercial source.",
     costNote: "$40-80/month for standard dosing (300-1000mg/day).",
     verdict: "May be slightly superior to NMN for NAD+ elevation. Brain penetrance is interesting. But same limitation: surrogate endpoint, not lifespan.",
-    sources: ["Norway NR vs NMN study 2026", "Lancet eClinMed 2025 Parkinson's", "Nature Metabolism 2026"]
+    sources: ["Cuenoud et al. Nature Metabolism 2026: head-to-head", "Lancet eClinMed 2025 Parkinson's", "Norway NR vs NMN study 2026"]
   },
   {
     id: "quercetin",
@@ -333,18 +333,18 @@ const INTERVENTIONS = [
     stage: "Observational + Small RCTs",
     stageLabel: "Small RCTs",
     organism: "Human (Observational + Small RCTs), Mouse",
-    mechanism: 6,
+    mechanism: 7,
     clinical: 4,
     biomarker: 5,
     safety: 8,
     cost: 7,
-    mechanismNote: "Autophagy inducer via hypusination of eIF5A. Observational data: higher dietary spermidine intake associated with reduced mortality. Mouse studies: extended lifespan, improved cardiac function.",
+    mechanismNote: "Autophagy inducer via hypusination of eIF5A. Nature Reviews 2026: spermidine feeding increased median lifespan ~10-15% in mice. Observational data: higher dietary spermidine intake associated with ~40% reduced fatal heart failure risk and lower all-cause mortality.",
     clinicalNote: "SmartAge trial: 3-month spermidine supplementation improved memory in older adults at risk of dementia. But small sample size. Observational longevity association.",
     biomarkerNote: "Autophagy markers, memory scores, cardiac biomarkers in preclinical. Limited validated aging biomarkers in human trials.",
     safetyNote: "Naturally occurring polyamine. Found in wheat germ, soybeans, aged cheese. Well-tolerated in trials.",
     costNote: "$30-60/month for supplements. Also available through diet (wheat germ).",
     verdict: "Interesting mechanism and observational data. Small human trials are encouraging but not definitive. A reasonable low-risk bet.",
-    sources: ["SmartAge trial", "Epidemiological mortality association"]
+    sources: ["SmartAge trial", "Nature Reviews 2026 spermidine review", "Oxford Healthspan Feb 2026 review", "Epidemiological mortality association"]
   },
 
   // === LIFESTYLE ===
