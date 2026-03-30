@@ -1,4 +1,4 @@
-// Longevity Interventions Database — March 2026 (Updated March 23, 2026)
+// Longevity Interventions Database — March 2026 (Updated March 30, 2026)
 // Scores: 0-10 scale per dimension
 // Composite = Mechanism(0.25) + Clinical(0.25) + Biomarker(0.20) + Safety(0.15) + Cost(0.15)
 
@@ -101,15 +101,15 @@ const INTERVENTIONS = [
     mechanism: 9,
     clinical: 7,
     biomarker: 8,
-    safety: 6,
+    safety: 5,
     cost: 3,
     mechanismNote: "First-generation senolytic. Dasatinib (tyrosine kinase inhibitor) + quercetin (flavonoid) transiently disable senescent cell anti-apoptotic pathways (SCAPs). Hit-and-run dosing — half-lives <11 hours.",
-    clinicalNote: "Phase 1 completed in diabetic kidney disease (reduced adipose senescent cells). Phase 1 in IPF (improved physical function). SToMP-AD and STAMINA trials in cognitive decline. Phase 2 AD trial underway. NEW: Mayo Clinic Phase I trial (NCT07025226) combining D+Q+fisetin+temozolomide for glioma.",
-    biomarkerNote: "Reduced p16/p21+ cells, SA-β-gal activity, circulating SASP factors (IL-1α, IL-6, MMP-9/12). CSF dasatinib penetrance confirmed (80% in SToMP-AD).",
-    safetyNote: "Dasatinib is FDA-approved for CML — known side effect profile (cytopenia, fluid retention, QT prolongation). Intermittent dosing mitigates chronic toxicity. Quercetin is GRAS. CAUTION: Aging Cell 2026 mouse study — D+Q before flu vaccination did NOT improve immune response and may impair CD8 T cell viral clearance.",
+    clinicalNote: "Phase 1 completed in diabetic kidney disease (reduced adipose senescent cells). Phase 1 in IPF (improved physical function). SToMP-AD and STAMINA trials in cognitive decline. Phase 2 AD trial underway. Mayo Clinic Phase I trial (NCT07025226) combining D+Q+fisetin+temozolomide for glioma. NEW: D+Q senolytics trial for secondary progressive MS (NCT07270120) launched.",
+    biomarkerNote: "Reduced p16/p21+ cells, SA-β-gal activity, circulating SASP factors (IL-1α, IL-6, MMP-9/12). CSF dasatinib penetrance confirmed (80% in SToMP-AD). Cedars-Sinai Feb 2026: senolytics clear 30-70% of senescent cells; remaining resistant cells may reactivate — 'senosensitizers' concept proposed.",
+    safetyNote: "Dasatinib is FDA-approved for CML — known side effect profile (cytopenia, fluid retention, QT prolongation). Intermittent dosing mitigates chronic toxicity. Quercetin is GRAS. MAJOR SAFETY SIGNAL: PNAS Mar 2026 (UConn) — D+Q causes significant demyelination and oligodendrocyte dysfunction in mouse brains via ER stress/UPR activation. Damage worse in younger mice. Oligodendrocytes shift to immature non-functional state resembling MS lesions. Also: Aging Cell 2026 — D+Q before flu vaccination did NOT improve immune response.",
     costNote: "Dasatinib requires prescription. Quercetin OTC (~$20/mo). Some longevity clinics prescribe D+Q off-label ($200-500/cycle).",
-    verdict: "The most clinically validated senolytic combination. Real human data across multiple indications. Dasatinib Rx requirement is the barrier.",
-    sources: ["Hickson et al. EBioMedicine 2019", "EBioMedicine IPF Phase 1 2023", "Orr — SToMP-AD/STAMINA 2025", "Aging Cell Jan 2026: D+Q flu vaccine study (mixed)", "NCT07025226: D+Q+fisetin glioma trial"]
+    verdict: "The most clinically validated senolytic combination, but the PNAS 2026 demyelination finding is a serious brain safety concern that warrants caution. Real human data across multiple indications, but CNS effects need investigation.",
+    sources: ["Hickson et al. EBioMedicine 2019", "EBioMedicine IPF Phase 1 2023", "Orr — SToMP-AD/STAMINA 2025", "Lombardo et al. PNAS Mar 2026: D+Q demyelination", "Aging Cell Jan 2026: D+Q flu vaccine study", "NCT07025226: D+Q+fisetin glioma trial", "NCT07270120: D+Q for SPMS", "Cedars-Sinai Aging Cell Feb 2026: senosensitizers"]
   },
   {
     id: "fisetin",
@@ -125,8 +125,8 @@ const INTERVENTIONS = [
     safety: 7,
     cost: 9,
     mechanismNote: "Naturally occurring flavonoid with senolytic activity. Selectively induces apoptosis in senescent cells. Reduced AF susceptibility in aged rabbits (Heart Rhythm, 2026). Anti-inflammatory and neuroprotective.",
-    clinicalNote: "Pilot PK/safety trial underway in healthy volunteers and multimorbid elderly (NCT06431932). Multiple Mayo Clinic-led trials. NEW: Phase I glioma trial (NCT07025226) combining fisetin with D+Q and temozolomide — first oncology application of senolytics. No Phase 2 standalone efficacy data yet.",
-    biomarkerNote: "Reduced p16/p21+ cells in animal models. Decreased senescent cell burden in rhesus monkeys (with D). PK data being collected in ongoing human trial.",
+    clinicalNote: "Pilot PK/safety trial underway in healthy volunteers and multimorbid elderly (NCT06431932). Multiple Mayo Clinic-led trials. Phase I glioma trial (NCT07025226) combining fisetin with D+Q and temozolomide — first oncology application of senolytics. No Phase 2 standalone efficacy data yet. Note: D+Q demyelination finding (PNAS 2026) raises questions about fisetin safety in combination, though standalone fisetin CNS effects untested.",
+    biomarkerNote: "Reduced p16/p21+ cells in animal models. Decreased senescent cell burden in rhesus monkeys (with D). PK data being collected in ongoing human trial. Cedars-Sinai Feb 2026: senolytic-resistant cells may need 'senosensitizers' for complete clearance.",
     safetyNote: "Naturally occurring in strawberries. OTC supplement. Low oral bioavailability (7.8-31.7%). No serious adverse events reported in animal studies.",
     costNote: "OTC supplement: $15-40/month. Widely available. No prescription needed.",
     verdict: "Best risk/reward for the self-experimenter. Cheap, safe, genuinely senolytic — but human efficacy data is still thin.",
@@ -164,17 +164,17 @@ const INTERVENTIONS = [
     stageLabel: "Approved (off-label)",
     organism: "Human (Approved), Mouse, Rat, NHP, Multiple Species",
     mechanism: 9,
-    clinical: 8,
+    clinical: 9,
     biomarker: 9,
     safety: 5,
     cost: 4,
     mechanismNote: "mTOR inhibitor. 167-study meta-analysis (Aging Cell, 2025): extends lifespan comparable to dietary restriction. Delays cancer, neurodegeneration, cardiac aging in mice. 9-14% lifespan extension in mice.",
-    clinicalNote: "FDA-approved for organ transplant rejection, TSC. Ongoing human longevity trial (PEARL) with positive interim signals. Everolimus (analog) shown to improve immune function in elderly (Mannick et al.).",
+    clinicalNote: "FDA-approved for organ transplant rejection, TSC. Ongoing human longevity trial (PEARL) with positive interim signals. Everolimus (analog) shown to improve immune function in elderly (Mannick et al.). NEW: NIA-funded UT Health San Antonio mega-trial launched Mar 2026 — largest rapamycin-for-aging study to date. 84 adults initially (daily vs intermittent dosing vs placebo), 6-month treatment + 6-month follow-up. Parallel sub-study comparing rapamycin + everolimus to find optimal dosing. Goal: determine optimal rapamycin dose that safely restores youthful immune/metabolic function in 65-90 year olds. Also testing semaglutide and dapagliflozin arms.",
     biomarkerNote: "Modulates mTOR/AMPK/autophagy axis. NEW: Aging Cell 2026 — first in-vivo human evidence that low-dose rapamycin (1mg/day, 4 months) significantly reduces p21 senescence marker in immune cells. Also reduces DNA damage (gammaH2AX) and mTORC1 hyperactivation in aged immune subsets.",
     safetyNote: "Known immunosuppressant — infections, mouth ulcers, metabolic effects at transplant doses. Low/intermittent dosing for longevity may mitigate. Requires monitoring.",
     costNote: "Generic available. ~$50-150/month for low-dose. Requires prescription and blood monitoring. Available via longevity clinics.",
     verdict: "The best-evidenced pharmacological longevity intervention in existence. The immunosuppression concern is real but manageable at low doses.",
-    sources: ["Frontiers in Aging 2025 Review", "167-study meta-analysis Aging Cell 2025", "Mannick et al. everolimus", "Kell et al. Aging Cell 2026: p21 reduction in vivo", "Food Med Center review Feb 2026"]
+    sources: ["Frontiers in Aging 2025 Review", "167-study meta-analysis Aging Cell 2025", "Mannick et al. everolimus", "Kell et al. Aging Cell 2026: p21 reduction in vivo", "UT Health San Antonio Mar 2026: NIA-funded rapamycin mega-trial", "Food Med Center review Feb 2026"]
   },
   {
     id: "metformin",
@@ -232,12 +232,12 @@ const INTERVENTIONS = [
     safety: 7,
     cost: 3,
     mechanismNote: "GLP-1/GIP receptor agonists. Primary: weight loss, glucose control. Emerging: cardiovascular protection (SELECT trial 20% MACE reduction), potential anti-inflammatory, possible neuroprotective. Not designed as anti-aging but hitting aging hallmarks.",
-    clinicalNote: "Massive Phase 3 programs. SURPASS, STEP, SELECT trials. FDA-approved for obesity and T2D. Being studied for MASH, heart failure, CKD, Alzheimer's. Microdosing trend: ~1 in 7 users microdosing for longevity/healthspan (Evidation survey Mar 2026). Economist and Science News coverage of off-label longevity use.",
-    biomarkerNote: "Weight loss, HbA1c, cardiovascular events, inflammatory markers. Not classic aging biomarkers but addressing metabolic aging.",
+    clinicalNote: "Massive Phase 3 programs. SURPASS, STEP, SELECT trials. FDA-approved for obesity and T2D. Being studied for MASH, heart failure, CKD, Alzheimer's. Microdosing trend: ~1 in 7 users microdosing for longevity/healthspan (Evidation survey Mar 2026). Economist and Science News coverage of off-label longevity use. NEW: PubMed Mar 2026 UK cohort modeling — semaglutide predicted to add 1.9 years life expectancy and 2.0 CV event-free life-years based on SELECT data. Also included in UT Health San Antonio rapamycin mega-trial as a comparator arm.",
+    biomarkerNote: "Weight loss, HbA1c, cardiovascular events, inflammatory markers. Not classic aging biomarkers but addressing metabolic aging. Projected life-year gains now modeled from real-world data.",
     safetyNote: "GI side effects common (nausea, vomiting). Pancreatitis risk. Muscle mass loss concerns. Well-monitored given massive patient exposure.",
     costNote: "$500-1,300/month without insurance. Compounding pharmacies ~$200-400/month. Insurance coverage variable.",
     verdict: "Not designed for longevity but may be the most impactful healthspan drug of the decade. Metabolic benefits are massive and well-proven.",
-    sources: ["SELECT trial results", "FDA approvals 2023-2025", "Science News Mar 2026: GLP-1 microdosing longevity", "Economist Mar 2026", "JHU meta-analysis Mar 2026: 64 trials"]
+    sources: ["SELECT trial results", "FDA approvals 2023-2025", "Science News Mar 2026: GLP-1 microdosing longevity", "Economist Mar 2026", "JHU meta-analysis Mar 2026: 64 trials", "PubMed Mar 2026: semaglutide +1.9yr life expectancy modeling"]
   },
 
   // === SUPPLEMENTS ===
