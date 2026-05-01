@@ -1,4 +1,4 @@
-// Longevity Interventions Database — April 2026 (Updated April 1, 2026)
+// Longevity Interventions Database — May 2026 (Updated May 1, 2026)
 // Scores: 0-10 scale per dimension
 // Composite = Mechanism(0.25) + Clinical(0.25) + Biomarker(0.20) + Safety(0.15) + Cost(0.15)
 
@@ -18,12 +18,12 @@ const INTERVENTIONS = [
     safety: 4,
     cost: 0,
     mechanismNote: "Partial epigenetic reprogramming via OSK (Oct4/Sox2/Klf4) delivered by AAV. Doxycycline-inducible on/off switch. Restores youthful DNA methylation without full dedifferentiation.",
-    clinicalNote: "FDA IND cleared Jan 2026. Phase 1 dosing underway: sentinel patient enrolled with 28-day monitoring before next cohort. Data readout expected Q4 2026 (BIO Investment Summit). NCT07290244. Dose escalation in OAG, then expansion in NAION.",
+    clinicalNote: "FDA IND cleared Jan 2026. Phase 1 dosing underway: sentinel patient enrolled with 28-day monitoring before next cohort. Data readout expected Q4 2026 (BIO Investment Summit). NCT07290244. Dose escalation in OAG, then expansion in NAION. Apr 2026: $80M Series D announced (Apr 8); PitchBook shows additional $111M Later Stage VC Apr 24 — total funding now $286M, signaling strong investor confidence ahead of Phase 1 readout.",
     biomarkerNote: "NHP data: restored methylation patterns, pERG improvement (visual function). Epigenetic clock reversal in preclinical models.",
     safetyNote: "Novel gene therapy modality — long-term oncogenesis risk unknown. Doxycycline control is a safety feature. 5-year follow-up planned.",
     costNote: "Experimental only. Gene therapy pricing likely >$100K if approved.",
     verdict: "Landmark — the first reprogramming therapy in humans. Incredible science, but years from consumer relevance.",
-    sources: ["ClinicalTrials.gov NCT07290244", "Life Biosciences Press Release Jan 2026", "Nature Biotechnology Feb 2026", "BIO Investment Summit Mar 2026: Q4 data readout", "Lifespan.io Feb 2026"]
+    sources: ["ClinicalTrials.gov NCT07290244", "Life Biosciences Press Release Jan 2026", "Nature Biotechnology Feb 2026", "BIO Investment Summit Mar 2026: Q4 data readout", "Lifespan.io Feb 2026", "Life Biosciences Apr 8 2026: $80M Series D", "PitchBook Apr 24 2026: $286M total funding"]
   },
   {
     id: "altos",
@@ -34,17 +34,17 @@ const INTERVENTIONS = [
     stageLabel: "Preclinical",
     organism: "Mouse, Cell Lines",
     mechanism: 9,
-    clinical: 2,
+    clinical: 3,
     biomarker: 7,
     safety: 3,
     cost: 0,
-    mechanismNote: "Cellular rejuvenation via reprogramming. Belmonte lab Cell 2025 paper showed partial reprogramming reverses mesenchymal drift. Oct 2025: gene silencing prevents cellular drift.",
-    clinicalNote: "No clinical trials announced. $3B+ funded, 500 employees. CMO Joan Mannick (mTOR expert) in place. Oct 2025 Cell paper: gene silencing prevents cellular drift. Launched Institute of Computation for AI-guided reprogramming. Reportedly seeking to raise $1B additional.",
+    mechanismNote: "Cellular rejuvenation via reprogramming. Belmonte lab Cell 2025 paper showed partial reprogramming reverses mesenchymal drift. Oct 2025: gene silencing prevents cellular drift. Berdugo-Vega et al. Neuron Feb 2026 (independent group): partial reprogramming of engram neurons via OSK gene therapy reversed cognitive decline in aged mice and AD models — restored learning/memory to young-animal levels, lending mechanistic support to platform-class.",
+    clinicalNote: "No clinical trials announced. $3B+ funded, 500 employees. CMO Joan Mannick (mTOR expert) in place. Oct 2025 Cell paper: gene silencing prevents cellular drift. Launched Institute of Computation for AI-guided reprogramming. Reportedly seeking to raise $1B additional. Field momentum: NewLimit reached $1.6B post-money valuation Oct 2025 (Eli Lilly investor); Life Biosciences' ER-100 actively dosing in Phase 1 — competitive pressure may accelerate Altos's clinical timeline.",
     biomarkerNote: "Published epigenetic clock reversal in multiple in vivo models. Computational models for cellular resilience.",
     safetyNote: "Same class-wide oncogenesis concerns as all reprogramming approaches. No human safety data.",
     costNote: "Not accessible. Research institution only.",
     verdict: "Best-funded lab in longevity. World-class science but no clinical timeline. Still a press release.",
-    sources: ["PitchBook: Altos Labs $3B+", "Labiotech Mar 2026", "Cell Oct 2025"]
+    sources: ["PitchBook: Altos Labs $3B+", "Labiotech Mar 2026", "Cell Oct 2025", "Berdugo-Vega et al. Neuron Feb 2026 (doi:10.1016/j.neuron.2025.11.028)", "PitchBook Oct 2025: NewLimit $1.6B valuation"]
   },
   {
     id: "retro",
@@ -125,12 +125,12 @@ const INTERVENTIONS = [
     safety: 7,
     cost: 9,
     mechanismNote: "Naturally occurring flavonoid with senolytic activity. Selectively induces apoptosis in senescent cells. Reduced AF susceptibility in aged rabbits (Heart Rhythm, 2026). Anti-inflammatory and neuroprotective.",
-    clinicalNote: "Pilot PK/safety trial underway in healthy volunteers and multimorbid elderly (NCT06431932). Multiple Mayo Clinic-led trials. Phase I glioma trial (NCT07025226) combining fisetin with D+Q and temozolomide — first oncology application of senolytics. No Phase 2 standalone efficacy data yet. Note: D+Q demyelination finding (PNAS 2026) raises questions about fisetin safety in combination, though standalone fisetin CNS effects untested.",
+    clinicalNote: "Pilot PK/safety trial underway in healthy volunteers and multimorbid elderly (NCT06431932). Multiple Mayo Clinic-led trials. Phase I glioma trial (NCT07025226) combining fisetin with D+Q and temozolomide — first oncology application of senolytics. NEW: TROFFi Phase 2 launched (PMC12979913, Mar 2026) — fisetin 20 mg/kg/day intermittent dosing in postmenopausal breast cancer survivors. Multiple fisetin trials now active: STOP-Sepsis, NCT06342791 (multimorbidity), TROPHY. No Phase 2 standalone efficacy data yet. Note: D+Q demyelination finding (PNAS 2026) raises questions about fisetin safety in combination, though standalone fisetin CNS effects untested.",
     biomarkerNote: "Reduced p16/p21+ cells in animal models. Decreased senescent cell burden in rhesus monkeys (with D). PK data being collected in ongoing human trial. Cedars-Sinai Feb 2026: senolytic-resistant cells may need 'senosensitizers' for complete clearance.",
     safetyNote: "Naturally occurring in strawberries. OTC supplement. Low oral bioavailability (7.8-31.7%). No serious adverse events reported in animal studies.",
     costNote: "OTC supplement: $15-40/month. Widely available. No prescription needed.",
     verdict: "Best risk/reward for the self-experimenter. Cheap, safe, genuinely senolytic — but human efficacy data is still thin.",
-    sources: ["Sengun et al. Heart Rhythm 2026", "NCT06431932", "NCT07025226: glioma senolytic trial", "Colman et al. D+fisetin in NHP"]
+    sources: ["Sengun et al. Heart Rhythm 2026", "NCT06431932", "NCT07025226: glioma senolytic trial", "Colman et al. D+fisetin in NHP", "TROFFi Phase 2 PMC12979913 Mar 2026", "NCT06342791: fisetin multimorbidity"]
   },
   {
     id: "unity-ubx",
@@ -185,17 +185,17 @@ const INTERVENTIONS = [
     stageLabel: "Approved (off-label)",
     organism: "Human (Approved), Mouse, Rat",
     mechanism: 7,
-    clinical: 7,
+    clinical: 6,
     biomarker: 6,
     safety: 9,
     cost: 9,
     mechanismNote: "AMPK activator → mTOR suppression. Hits more hallmarks of aging than any other drug (per Barzilai). But 2025 meta-analysis: does NOT significantly extend lifespan in healthy vertebrates. MET-PREVENT trial: no improvement in grip strength, walking speed.",
-    clinicalNote: "TAME trial (3,000+ patients, 14 sites) ongoing — results expected late 2020s. Observational data: 18% higher median survival in diabetics vs non-diabetics. But selection bias concerns.",
+    clinicalNote: "TAME trial (3,000+ patients, 14 sites) still unfunded/recruiting — results not expected before late 2020s. Observational data: 18% higher median survival in diabetics vs non-diabetics, but selection bias concerns. NEGATIVE: MET-PREVENT (Lancet Healthy Longevity 2025) showed no improvement in mobility or physical function in pre-frail older adults over 18 months. Now included as a comparator arm in the UT Health San Antonio rapamycin mega-trial and in NCT07293325 (vs GLP-1s on DNA methylation age) — these head-to-head designs will provide more rigorous tests than TAME-style mortality endpoints.",
     biomarkerNote: "Broad but modest effects on inflammation, glucose metabolism, cellular senescence. No dramatic aging clock reversal demonstrated.",
     safetyNote: "Decades of safety data. GI side effects common but manageable. B12 depletion with chronic use. Extremely well-characterized.",
     costNote: "Cheapest drug in the formulary. ~$4-10/month generic. Easy to obtain off-label.",
     verdict: "Safe, cheap, widely available. But the longevity-specific evidence is weaker than the hype suggests. TAME trial is the definitive test.",
-    sources: ["AFAR TAME Trial", "Barzilai interview Lifespan.io 2025", "Aging Cell 2025 meta-analysis", "ScienceDirect uncertainty review"]
+    sources: ["AFAR TAME Trial", "Barzilai interview Lifespan.io 2025", "Aging Cell 2025 meta-analysis", "ScienceDirect uncertainty review", "MET-PREVENT 2025 Lancet Healthy Longevity", "NCT07293325 (semaglutide/tirzepatide/metformin)"]
   },
   {
     id: "mdi2517",
@@ -211,7 +211,7 @@ const INTERVENTIONS = [
     safety: 5,
     cost: 0,
     mechanismNote: "Plasminogen Activator Inhibitor-1 (PAI-1) inhibitor. Human genetics: Amish community with PAI-1 loss-of-function mutation live ~10 years longer. PAI-1 elevated in aging, fibrosis, metabolic syndrome.",
-    clinicalNote: "Phase 1 completed Jan 2026: good safety/tolerability, once-daily oral dosing confirmed. Phase 2 PoC planned H2 2026 targeting chronic kidney disease and interstitial lung disease. MDI Therapeutics: $9.6M raised. First-in-class PAI-1 inhibitor.",
+    clinicalNote: "Phase 1 successfully completed Jan 2026: good safety/tolerability, once-daily oral dosing confirmed. Phase 2 PoC trials confirmed for H2 2026, targeting metabolic and fibrotic disease (chronic kidney disease, interstitial lung disease likely indications). MDI Therapeutics: $9.6M raised. First-in-class PAI-1 inhibitor — Juvenescence remains the lead clinical-stage longevity-pathway program in the pharma class.",
     biomarkerNote: "PAI-1 levels directly measurable. Fibrosis and metabolic biomarkers relevant. Human genetic validation is the gold standard.",
     safetyNote: "Phase 1 clean. Unknown long-term effects of chronic PAI-1 inhibition. Bleeding risk theoretical concern.",
     costNote: "Experimental only.",
@@ -228,16 +228,16 @@ const INTERVENTIONS = [
     organism: "Human (Approved)",
     mechanism: 7,
     clinical: 9,
-    biomarker: 8,
+    biomarker: 9,
     safety: 7,
     cost: 3,
     mechanismNote: "GLP-1/GIP receptor agonists. Primary: weight loss, glucose control. Emerging: cardiovascular protection (SELECT trial 20% MACE reduction), potential anti-inflammatory, possible neuroprotective. Not designed as anti-aging but hitting aging hallmarks.",
-    clinicalNote: "Massive Phase 3 programs. SURPASS, STEP, SELECT trials. FDA-approved for obesity and T2D. Being studied for MASH, heart failure, CKD, Alzheimer's. Microdosing trend: ~1 in 7 users microdosing for longevity/healthspan (Evidation survey Mar 2026). PubMed Mar 2026 UK cohort modeling — semaglutide predicted to add 1.9 years life expectancy. NEW: NCT07293325 launched — first dedicated aging biomarker trial comparing semaglutide vs tirzepatide vs metformin on DNA methylation age (66 adults, 24 weeks). Also included in UT Health rapamycin mega-trial as a comparator arm.",
-    biomarkerNote: "Weight loss, HbA1c, cardiovascular events, inflammatory markers. NEW: SLIM LIVER post-hoc (Research Square 2025) — semaglutide modulated DunedinPACE (epigenetic pace of aging) in 41.5% of participants, with responders showing greater liver fat reduction (p=0.024) and improved gait speed. First evidence of GLP-1 effects on validated aging clocks.",
+    clinicalNote: "Massive Phase 3 programs. SURPASS, STEP, SELECT trials. FDA-approved for obesity and T2D. Being studied for MASH, heart failure, CKD, Alzheimer's. Microdosing trend: ~1 in 7 users microdosing for longevity/healthspan (Evidation survey Mar 2026). PubMed Mar 2026 UK cohort modeling — semaglutide predicted to add 1.9 years life expectancy. NCT07293325 launched: first dedicated aging biomarker trial comparing semaglutide vs tirzepatide vs metformin on DNA methylation age (66 adults, 24 weeks). Also included in UT Health rapamycin mega-trial as comparator arm. CAVEAT: Novo Nordisk EVOKE/EVOKE+ trials (announced Nov 2025, presented AD/PD 2026) — oral semaglutide FAILED for Alzheimer's cognitive endpoints, though it did reduce CSF p-tau181, so neurodegeneration story is mixed.",
+    biomarkerNote: "Weight loss, HbA1c, cardiovascular events, inflammatory markers. MAJOR NEW EVIDENCE: Nature Aging Apr 21, 2026 (n=84, 32-week RCT post-hoc in PWH with lipohypertrophy) — semaglutide significantly slowed epigenetic aging vs placebo across multiple DNA methylation clocks: PCGrimAge EAA -3.08 yr/yr, DunedinPACE -0.09 units/yr, GrimAge V1 -1.39, GrimAge V2 -2.26, PhenoAge -4.90, OMICmAge -2.20, RetroAge -2.18, SystemsAge -4.17. Concordant slowdowns across 11 organ-system clocks. This is the strongest GLP-1-on-aging-clock evidence to date and elevates GLP-1s into best-in-class biomarker territory. Earlier SLIM LIVER post-hoc had shown DunedinPACE modulation in 41.5% of participants.",
     safetyNote: "GI side effects common (nausea, vomiting). Pancreatitis risk. Muscle mass loss concerns. Well-monitored given massive patient exposure.",
     costNote: "$500-1,300/month without insurance. Compounding pharmacies ~$200-400/month. Insurance coverage variable.",
     verdict: "Not designed for longevity but may be the most impactful healthspan drug of the decade. Metabolic benefits are massive and well-proven.",
-    sources: ["SELECT trial results", "FDA approvals 2023-2025", "Science News Mar 2026: GLP-1 microdosing longevity", "SLIM LIVER post-hoc Research Square 2025: DunedinPACE modulation", "NCT07293325: semaglutide vs tirzepatide vs metformin aging trial", "PubMed Mar 2026: semaglutide +1.9yr life expectancy modeling"]
+    sources: ["SELECT trial results", "FDA approvals 2023-2025", "Science News Mar 2026: GLP-1 microdosing longevity", "SLIM LIVER post-hoc Research Square 2025: DunedinPACE modulation", "NCT07293325: semaglutide vs tirzepatide vs metformin aging trial", "PubMed Mar 2026: semaglutide +1.9yr life expectancy modeling", "Nature Aging Apr 21 2026: semaglutide slows multiple epigenetic clocks (doi:10.1038/s41514-026-00383-9)", "Novo Nordisk EVOKE/EVOKE+ Nov 2025: oral semaglutide FAILED Alzheimer endpoints"]
   },
 
   // === SUPPLEMENTS ===
@@ -255,12 +255,12 @@ const INTERVENTIONS = [
     safety: 8,
     cost: 6,
     mechanismNote: "NAD+ precursor → Sirtuin activation → improved mitochondrial function. Nature Metabolism 2026: NMN and NR both ~2x circulating NAD+ after 14 days. Gut bacteria convert NMN to nicotinic acid for systemic NAD+ boost.",
-    clinicalNote: "Multiple small human RCTs showing NAD+ elevation. Nature Metabolism 2026 head-to-head: NMN and NR both ~2x NAD+ at 14 days, while nicotinamide (Nam) only works acutely. NMNH (reduced form) triples NAD+ in first human trial (unpublished, 80 adults, 90 days). Still no hard clinical longevity endpoints.",
-    biomarkerNote: "Reliably raises blood NAD+ levels ~2-fold. Increases short-chain fatty acids (SCFA). But brain NAD+ not elevated at 8 days. Surrogate, not clinical, endpoints.",
+    clinicalNote: "Multiple small human RCTs showing NAD+ elevation. Nature Metabolism 2026 head-to-head: NMN and NR both ~2x NAD+ at 14 days, while nicotinamide (Nam) only works acutely. NMNH (reduced form) triples NAD+ in first human trial (unpublished, 80 adults, 90 days). NEW: Berven et al. iScience 2026 (doi:10.1016/j.isci.2026.114764) head-to-head — at 1200mg/day for 8 days (n=6), NR raised blood NAD+ ~2.3x more than NMN; brain NAD+ measurement was only performed for NR, where it rose at 4 weeks. Still no hard clinical longevity endpoints for either.",
+    biomarkerNote: "Reliably raises blood NAD+ levels ~2-fold. Increases short-chain fatty acids (SCFA). Berven 2026: NMN did not test in brain — at 8 days NMN raised blood NAD+ less than NR. Surrogate, not clinical, endpoints.",
     safetyNote: "Well-tolerated in trials. OTC supplement. No serious adverse events reported. Long-term safety unknown at high doses.",
     costNote: "Quality varies wildly. $40-120/month for 500mg-1g/day from reputable brands.",
     verdict: "Reliably raises NAD+. But NAD+ is a biomarker, not a clinical outcome. The longevity claims outrun the evidence.",
-    sources: ["Cuenoud et al. Nature Metabolism 2026", "nmn.com review", "NAD.com Jan 2026: NMNH trial results"]
+    sources: ["Cuenoud et al. Nature Metabolism 2026", "nmn.com review", "NAD.com Jan 2026: NMNH trial results", "Berven et al. iScience 2026: NR vs NMN head-to-head (doi:10.1016/j.isci.2026.114764)"]
   },
   {
     id: "nr",
@@ -275,13 +275,13 @@ const INTERVENTIONS = [
     biomarker: 7,
     safety: 8,
     cost: 6,
-    mechanismNote: "NAD+ precursor like NMN. Norway study (2026): NR raised blood NAD+ 2.3x more than NMN at 8 days. After 4 weeks, NR raised brain NAD+ in healthy individuals (not in Parkinson's patients).",
-    clinicalNote: "Lancet eClinicalMedicine 2025: Phase I in Parkinson's — enhanced NAD+ metabolome, upregulated mitochondrial respiration. Nature Metabolism 2026 head-to-head confirms NR comparable to NMN for NAD+ elevation. Key finding: gut bacteria convert NR to nicotinic acid for systemic NAD+ boost. Also increases short-chain fatty acids (SCFAs).",
-    biomarkerNote: "Raises blood NAD+ (possibly more than NMN per Norway study). Brain NAD+ elevation after 4 weeks. Parkinson's trial: improved mitochondrial function markers.",
+    mechanismNote: "NAD+ precursor like NMN. Berven et al. iScience 2026: at 1200mg/day for 8 days, NR raised blood NAD+ ~2.3x more than NMN. After 4 weeks, NR raised brain NAD+ in healthy individuals (not in Parkinson's patients).",
+    clinicalNote: "Lancet eClinicalMedicine 2025: Phase I in Parkinson's — enhanced NAD+ metabolome, upregulated mitochondrial respiration. Nature Metabolism 2026 head-to-head confirms NR comparable to NMN for NAD+ elevation. NEW: Berven et al. iScience 2026 (doi:10.1016/j.isci.2026.114764) — head-to-head crossover in n=6 found NR superior to NMN on blood NAD+ at 8 days, and uniquely raised brain NAD+ at 4 weeks (NMN was not tested in brain). Key finding: gut bacteria convert NR to nicotinic acid for systemic NAD+ boost. Also increases short-chain fatty acids (SCFAs).",
+    biomarkerNote: "Raises blood NAD+ (~2.3x more than NMN per Berven 2026). Brain NAD+ elevation after 4 weeks of NR — first NAD+ precursor with confirmed brain penetrance in healthy humans. Parkinson's trial: improved mitochondrial function markers.",
     safetyNote: "GRAS status (Niagen). Well-tolerated across multiple trials. ChromaDex/Tru Niagen is the main commercial source.",
     costNote: "$40-80/month for standard dosing (300-1000mg/day).",
     verdict: "May be slightly superior to NMN for NAD+ elevation. Brain penetrance is interesting. But same limitation: surrogate endpoint, not lifespan.",
-    sources: ["Cuenoud et al. Nature Metabolism 2026: head-to-head", "Lancet eClinMed 2025 Parkinson's", "Norway NR vs NMN study 2026"]
+    sources: ["Cuenoud et al. Nature Metabolism 2026: head-to-head", "Lancet eClinMed 2025 Parkinson's", "Berven et al. iScience 2026: NR vs NMN, brain NAD+ (doi:10.1016/j.isci.2026.114764)"]
   },
   {
     id: "quercetin",
