@@ -1,4 +1,4 @@
-// Longevity Interventions Database — May 2026 (Updated May 1, 2026)
+// Longevity Interventions Database — June 2026 (Updated June 1, 2026)
 // Scores: 0-10 scale per dimension
 // Composite = Mechanism(0.25) + Clinical(0.25) + Biomarker(0.20) + Safety(0.15) + Cost(0.15)
 
@@ -55,17 +55,17 @@ const INTERVENTIONS = [
     stageLabel: "Phase 1",
     organism: "Human (Phase 1), Mouse",
     mechanism: 8,
-    clinical: 6,
+    clinical: 7,
     biomarker: 7,
     safety: 4,
     cost: 0,
     mechanismNote: "Dual approach: cellular reprogramming + autophagy activation. Partnered with OpenAI to engineer RetroSOX/RetroKLF variants (50x higher reprogramming markers). RTR242 restores lysosomal function to reactivate cellular cleanup machinery.",
-    clinicalNote: "RTR242 Phase 1 first-in-human trial initiated Feb 2026 in Australia. Randomized, double-blind, placebo-controlled in healthy volunteers. Includes exploratory autophagy/lysosomal biomarkers. $1.18B raised (PitchBook).",
+    clinicalNote: "RTR242 Phase 1 first-in-human trial dosing for Alzheimer's disease (oral autophagy enhancer). Indication-to-FIH in just 15 months. Retro raised at $1.8B pre-money valuation May 22, 2026 (4P Capital lead) per STAT and BAIO — now one of the most-capitalized longevity startups. Also pursuing iPSC cell therapies, tissue reprogramming, and AI protein engineering. Competitor Lysoway Therapeutics (LW-1017) also entered Phase 1 in autophagy class for neurodegeneration.",
     biomarkerNote: "AI-designed Yamanaka factor variants showed improved reprogramming markers in vitro. Autophagy biomarkers being tracked.",
     safetyNote: "RTR242 safety data pending from Phase 1. Autophagy modulation is less risky than direct reprogramming.",
     costNote: "Experimental only.",
     verdict: "Sam Altman–backed moonshot with real clinical progress. The AI-engineered factors are genuinely novel.",
-    sources: ["PitchBook: Retro $1.18B", "Labiotech Mar 2026", "FT Jan 2026", "Fight Aging Jan 2026: RTR242 Phase 1 details"]
+    sources: ["PitchBook: Retro $1.18B (pre-May raise)", "Labiotech Mar 2026", "FT Jan 2026", "Fight Aging Jan 2026: RTR242 Phase 1 details", "STAT May 22 2026: Retro $1.8B valuation", "BAIO May 25 2026: 4P Capital round", "PharmaVoice May 29 2026: Retro/Lysoway autophagy class"]
   },
   {
     id: "chemical-reprog",
@@ -125,12 +125,12 @@ const INTERVENTIONS = [
     safety: 7,
     cost: 9,
     mechanismNote: "Naturally occurring flavonoid with senolytic activity. Selectively induces apoptosis in senescent cells. Reduced AF susceptibility in aged rabbits (Heart Rhythm, 2026). Anti-inflammatory and neuroprotective.",
-    clinicalNote: "Pilot PK/safety trial underway in healthy volunteers and multimorbid elderly (NCT06431932). Multiple Mayo Clinic-led trials. Phase I glioma trial (NCT07025226) combining fisetin with D+Q and temozolomide — first oncology application of senolytics. NEW: TROFFi Phase 2 launched (PMC12979913, Mar 2026) — fisetin 20 mg/kg/day intermittent dosing in postmenopausal breast cancer survivors. Multiple fisetin trials now active: STOP-Sepsis, NCT06342791 (multimorbidity), TROPHY. No Phase 2 standalone efficacy data yet. Note: D+Q demyelination finding (PNAS 2026) raises questions about fisetin safety in combination, though standalone fisetin CNS effects untested.",
+    clinicalNote: "Pilot PK/safety trial underway in healthy volunteers and multimorbid elderly (NCT06431932). Multiple Mayo Clinic-led trials. Phase I glioma trial (NCT07025226) combining fisetin with D+Q and temozolomide — first oncology application of senolytics. PROFFi Phase 2 (AACR 2026 Apr 17, abstract CT276): n=200 postmenopausal breast cancer survivors, 4-arm factorial (fisetin alone, exercise alone, fisetin+exercise, control), 20 mg/kg/day fisetin days 1-3 of each 14-day cycle for 16 weeks. Primary endpoint: 6-minute walk distance change. Mayo also running ALLIANCE (NCT04733534) frailty trial; multiple fisetin trials active: STOP-Sepsis, NCT06342791 (multimorbidity), TROPHY. No Phase 2 standalone efficacy data yet. Note: D+Q demyelination finding (PNAS 2026) raises questions about fisetin safety in combination, though standalone fisetin CNS effects untested.",
     biomarkerNote: "Reduced p16/p21+ cells in animal models. Decreased senescent cell burden in rhesus monkeys (with D). PK data being collected in ongoing human trial. Cedars-Sinai Feb 2026: senolytic-resistant cells may need 'senosensitizers' for complete clearance.",
     safetyNote: "Naturally occurring in strawberries. OTC supplement. Low oral bioavailability (7.8-31.7%). No serious adverse events reported in animal studies.",
     costNote: "OTC supplement: $15-40/month. Widely available. No prescription needed.",
     verdict: "Best risk/reward for the self-experimenter. Cheap, safe, genuinely senolytic — but human efficacy data is still thin.",
-    sources: ["Sengun et al. Heart Rhythm 2026", "NCT06431932", "NCT07025226: glioma senolytic trial", "Colman et al. D+fisetin in NHP", "TROFFi Phase 2 PMC12979913 Mar 2026", "NCT06342791: fisetin multimorbidity"]
+    sources: ["Sengun et al. Heart Rhythm 2026", "NCT06431932", "NCT07025226: glioma senolytic trial", "Colman et al. D+fisetin in NHP", "Margolis et al. AACR 2026 CT276: PROFFi Phase 2 protocol", "NCT06342791: fisetin multimorbidity"]
   },
   {
     id: "unity-ubx",
@@ -164,17 +164,17 @@ const INTERVENTIONS = [
     stageLabel: "Approved (off-label)",
     organism: "Human (Approved), Mouse, Rat, NHP, Multiple Species",
     mechanism: 9,
-    clinical: 9,
+    clinical: 8,
     biomarker: 8,
     safety: 5,
     cost: 4,
     mechanismNote: "mTOR inhibitor. 167-study meta-analysis (Aging Cell, 2025): extends lifespan comparable to dietary restriction. Delays cancer, neurodegeneration, cardiac aging in mice. 9-14% lifespan extension in mice.",
-    clinicalNote: "FDA-approved for organ transplant rejection, TSC. PEARL trial 48-week results (Aging, Apr 2025): primary endpoint (visceral fat) NEGATIVE. Secondary signals: lean tissue mass improved in women at 10mg (p=0.013), self-reported pain improved (p=0.015), general health improved at 5mg. Safe for 1 year — no immunosuppression/metabolic red flags. NIA-funded UT Health San Antonio mega-trial launched Mar 2026 — largest rapamycin-for-aging study to date (84 adults, daily vs intermittent dosing). Also testing semaglutide and dapagliflozin comparator arms.",
+    clinicalNote: "FDA-approved for organ transplant rejection, TSC. PEARL trial 48-week results (Aging, Apr 2025): primary endpoint (visceral fat) NEGATIVE; safe for 1 year. NEGATIVE: RAPA-EX-01 (May 2026) — first randomized double-blind trial pairing weekly sirolimus (6 mg) with home-based exercise in 40 sedentary adults aged 65-85. Rapamycin did NOT enhance functional gains; direction of effect favored placebo: 30-sec chair-stand adjusted mean difference -2.13 reps (p=0.089 ITT; p=0.045 complete-case; p=0.007 per-protocol). 6-minute walk -4.87m (p=0.706), grip -1.19kg (p=0.344), all directionally worse on rapamycin. Small significant HbA1c rise and one pneumonia case in rapamycin arm — immune/glucose signals consistent with transplant-dose biology. NIA-funded UT Health San Antonio mega-trial (semaglutide and dapagliflozin comparator arms) remains the next definitive test.",
     biomarkerNote: "Modulates mTOR/AMPK/autophagy axis. Aging Cell 2026: low-dose rapamycin (1mg/day, 4 months) reduces p21 senescence marker and DNA damage (gammaH2AX) in human immune cells in vivo. However, PEARL trial (n=24 subset) showed NO significant epigenetic clock changes (TruAge) at 48 weeks. Gut dysbiosis signal at 10mg in males.",
     safetyNote: "Known immunosuppressant — infections, mouth ulcers, metabolic effects at transplant doses. Low/intermittent dosing for longevity may mitigate. Requires monitoring.",
     costNote: "Generic available. ~$50-150/month for low-dose. Requires prescription and blood monitoring. Available via longevity clinics.",
-    verdict: "The best-evidenced pharmacological longevity intervention. PEARL missed its primary endpoint but confirmed safety for 1 year and showed signals in lean mass and pain. The UT mega-trial is the next definitive test.",
-    sources: ["Moel et al. Aging Apr 2025: PEARL 48-week full results (NCT04488601)", "167-study meta-analysis Aging Cell 2025", "Kell et al. Aging Cell 2026: p21 reduction in vivo", "UT Health San Antonio Mar 2026: NIA-funded rapamycin mega-trial", "Food Med Center review Feb 2026"]
+    verdict: "The best-evidenced pharmacological longevity intervention in mice, but two consecutive negative human trials (PEARL and RAPA-EX-01) and a possible muscle-adaptation tradeoff have eroded the clinical case. UT mega-trial is now the make-or-break readout.",
+    sources: ["Moel et al. Aging Apr 2025: PEARL 48-week full results (NCT04488601)", "167-study meta-analysis Aging Cell 2025", "Kell et al. Aging Cell 2026: p21 reduction in vivo", "UT Health San Antonio Mar 2026: NIA-funded rapamycin mega-trial", "Peter Attia review May 2 2026: RAPA-EX-01 trial analysis", "RAPA-EX-01 (n=40, 65-85yr, 13wk): rapamycin blunted exercise gains"]
   },
   {
     id: "metformin",
@@ -211,12 +211,12 @@ const INTERVENTIONS = [
     safety: 5,
     cost: 0,
     mechanismNote: "Plasminogen Activator Inhibitor-1 (PAI-1) inhibitor. Human genetics: Amish community with PAI-1 loss-of-function mutation live ~10 years longer. PAI-1 elevated in aging, fibrosis, metabolic syndrome.",
-    clinicalNote: "Phase 1 successfully completed Jan 2026: good safety/tolerability, once-daily oral dosing confirmed. Phase 2 PoC trials confirmed for H2 2026, targeting metabolic and fibrotic disease (chronic kidney disease, interstitial lung disease likely indications). MDI Therapeutics: $9.6M raised. First-in-class PAI-1 inhibitor — Juvenescence remains the lead clinical-stage longevity-pathway program in the pharma class.",
+    clinicalNote: "Phase 1 successfully completed Jan 2026: good safety/tolerability, once-daily oral dosing confirmed. Phase 2 PoC trials confirmed for H2 2026, targeting metabolic and fibrotic disease (chronic kidney disease, interstitial lung disease likely indications). MDI Therapeutics: $9.6M raised. First-in-class PAI-1 inhibitor. May 2026: parent Juvenescence announced strategic partnership and investment from M42 (UAE health/AI/genomics group) at Abu Dhabi Global Health Week, plus acquired AI drug-discovery company Ro5 to strengthen its AI-enabled longevity pipeline — Juvenescence remains the lead clinical-stage longevity-pathway program in the pharma class.",
     biomarkerNote: "PAI-1 levels directly measurable. Fibrosis and metabolic biomarkers relevant. Human genetic validation is the gold standard.",
     safetyNote: "Phase 1 clean. Unknown long-term effects of chronic PAI-1 inhibition. Bleeding risk theoretical concern.",
     costNote: "Experimental only.",
     verdict: "One of the most genetically validated aging targets. The Amish data is compelling. Phase 2 will be the real test.",
-    sources: ["BioSpace Feb 2026", "Longevity.Technology Mar 2026", "PitchBook: MDI Therapeutics", "LinkedIn: Parris Longevity Accelerator Mar 2026"]
+    sources: ["BioSpace Feb 2026", "Longevity.Technology Mar 2026", "PitchBook: MDI Therapeutics", "M42 May 13 2026: strategic investment in Juvenescence", "Juvenescence May 2026: Ro5 AI acquisition"]
   },
   {
     id: "glp1",
@@ -233,11 +233,11 @@ const INTERVENTIONS = [
     cost: 3,
     mechanismNote: "GLP-1/GIP receptor agonists. Primary: weight loss, glucose control. Emerging: cardiovascular protection (SELECT trial 20% MACE reduction), potential anti-inflammatory, possible neuroprotective. Not designed as anti-aging but hitting aging hallmarks.",
     clinicalNote: "Massive Phase 3 programs. SURPASS, STEP, SELECT trials. FDA-approved for obesity and T2D. Being studied for MASH, heart failure, CKD, Alzheimer's. Microdosing trend: ~1 in 7 users microdosing for longevity/healthspan (Evidation survey Mar 2026). PubMed Mar 2026 UK cohort modeling — semaglutide predicted to add 1.9 years life expectancy. NCT07293325 launched: first dedicated aging biomarker trial comparing semaglutide vs tirzepatide vs metformin on DNA methylation age (66 adults, 24 weeks). Also included in UT Health rapamycin mega-trial as comparator arm. CAVEAT: Novo Nordisk EVOKE/EVOKE+ trials (announced Nov 2025, presented AD/PD 2026) — oral semaglutide FAILED for Alzheimer's cognitive endpoints, though it did reduce CSF p-tau181, so neurodegeneration story is mixed.",
-    biomarkerNote: "Weight loss, HbA1c, cardiovascular events, inflammatory markers. MAJOR NEW EVIDENCE: Nature Aging Apr 21, 2026 (n=84, 32-week RCT post-hoc in PWH with lipohypertrophy) — semaglutide significantly slowed epigenetic aging vs placebo across multiple DNA methylation clocks: PCGrimAge EAA -3.08 yr/yr, DunedinPACE -0.09 units/yr, GrimAge V1 -1.39, GrimAge V2 -2.26, PhenoAge -4.90, OMICmAge -2.20, RetroAge -2.18, SystemsAge -4.17. Concordant slowdowns across 11 organ-system clocks. This is the strongest GLP-1-on-aging-clock evidence to date and elevates GLP-1s into best-in-class biomarker territory. Earlier SLIM LIVER post-hoc had shown DunedinPACE modulation in 41.5% of participants.",
+    biomarkerNote: "Weight loss, HbA1c, cardiovascular events, inflammatory markers. KEY EVIDENCE (Corley et al., Nature Communications, May 2026, formal publication of Apr 2026 preprint; n=84, 32-week RCT post-hoc in PWH-associated lipohypertrophy, NCT04019197): semaglutide significantly slowed epigenetic aging vs placebo across multiple DNA methylation clocks: PCGrimAge EAA -3.08 yr/yr (p=0.007), DunedinPACE -0.09 units/yr (~9% slower pace of aging), GrimAge V1/V2, PhenoAge -4.90 yr/yr (p=0.004), OMICmAge, RetroAge, SystemsAge. Concordant slowdowns across 11 organ-system clocks; effects independent of blood cell-type shifts, suggesting a true biological aging signal. This is the strongest GLP-1-on-aging-clock evidence to date. Earlier SLIM LIVER post-hoc had shown DunedinPACE modulation in 41.5% of participants. Pooled STEP analysis (Medical Xpress May 10 2026) in adults 65+: semaglutide retains weight-loss and cardiometabolic efficacy with safety consistent with younger cohorts.",
     safetyNote: "GI side effects common (nausea, vomiting). Pancreatitis risk. Muscle mass loss concerns. Well-monitored given massive patient exposure.",
     costNote: "$500-1,300/month without insurance. Compounding pharmacies ~$200-400/month. Insurance coverage variable.",
     verdict: "Not designed for longevity but may be the most impactful healthspan drug of the decade. Metabolic benefits are massive and well-proven.",
-    sources: ["SELECT trial results", "FDA approvals 2023-2025", "Science News Mar 2026: GLP-1 microdosing longevity", "SLIM LIVER post-hoc Research Square 2025: DunedinPACE modulation", "NCT07293325: semaglutide vs tirzepatide vs metformin aging trial", "PubMed Mar 2026: semaglutide +1.9yr life expectancy modeling", "Nature Aging Apr 21 2026: semaglutide slows multiple epigenetic clocks (doi:10.1038/s41514-026-00383-9)", "Novo Nordisk EVOKE/EVOKE+ Nov 2025: oral semaglutide FAILED Alzheimer endpoints"]
+    sources: ["SELECT trial results", "FDA approvals 2023-2025", "Science News Mar 2026: GLP-1 microdosing longevity", "SLIM LIVER post-hoc Research Square 2025: DunedinPACE modulation", "NCT07293325: semaglutide vs tirzepatide vs metformin aging trial", "PubMed Mar 2026: semaglutide +1.9yr life expectancy modeling", "Corley et al. Nature Communications May 2026: semaglutide slows multiple epigenetic clocks (doi:10.1038/s41467-026-72861-3)", "Novo Nordisk EVOKE/EVOKE+ Nov 2025: oral semaglutide FAILED Alzheimer endpoints", "Medical Xpress May 10 2026: pooled STEP analysis 65+"]
   },
 
   // === SUPPLEMENTS ===
