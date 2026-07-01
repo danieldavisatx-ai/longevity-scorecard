@@ -1,4 +1,4 @@
-// Longevity Interventions Database — June 2026 (Updated June 1, 2026)
+// Longevity Interventions Database — July 2026 (Updated July 1, 2026)
 // Scores: 0-10 scale per dimension
 // Composite = Mechanism(0.25) + Clinical(0.25) + Biomarker(0.20) + Safety(0.15) + Cost(0.15)
 
@@ -13,17 +13,17 @@ const INTERVENTIONS = [
     stageLabel: "Phase 1",
     organism: "Human (Phase 1), NHP, Mouse",
     mechanism: 9,
-    clinical: 6,
+    clinical: 7,
     biomarker: 8,
     safety: 4,
     cost: 0,
     mechanismNote: "Partial epigenetic reprogramming via OSK (Oct4/Sox2/Klf4) delivered by AAV. Doxycycline-inducible on/off switch. Restores youthful DNA methylation without full dedifferentiation.",
-    clinicalNote: "FDA IND cleared Jan 2026. Phase 1 dosing underway: sentinel patient enrolled with 28-day monitoring before next cohort. Data readout expected Q4 2026 (BIO Investment Summit). NCT07290244. Dose escalation in OAG, then expansion in NAION. Apr 2026: $80M Series D announced (Apr 8); PitchBook shows additional $111M Later Stage VC Apr 24 — total funding now $286M, signaling strong investor confidence ahead of Phase 1 readout.",
+    clinicalNote: "HISTORIC MILESTONE — first patient dosed June 9, 2026 in Phase 1 trial (Life Biosciences press release; Washington Times Jun 16). ER-100 becomes the first Yamanaka-factor partial-reprogramming therapy ever administered to a human. Intravitreal injection targeting open-angle glaucoma and NAION; three-factor cassette (OCT-4, SOX-2, KLF-4) activated for 8 weeks by systemic doxycycline. FDA IND cleared Jan 2026. Data readout expected Q4 2026 (BIO Investment Summit). NCT07290244. Apr 2026: $80M Series D + PitchBook $111M Later Stage VC = $286M total funding.",
     biomarkerNote: "NHP data: restored methylation patterns, pERG improvement (visual function). Epigenetic clock reversal in preclinical models.",
     safetyNote: "Novel gene therapy modality — long-term oncogenesis risk unknown. Doxycycline control is a safety feature. 5-year follow-up planned.",
     costNote: "Experimental only. Gene therapy pricing likely >$100K if approved.",
     verdict: "Landmark — the first reprogramming therapy in humans. Incredible science, but years from consumer relevance.",
-    sources: ["ClinicalTrials.gov NCT07290244", "Life Biosciences Press Release Jan 2026", "Nature Biotechnology Feb 2026", "BIO Investment Summit Mar 2026: Q4 data readout", "Lifespan.io Feb 2026", "Life Biosciences Apr 8 2026: $80M Series D", "PitchBook Apr 24 2026: $286M total funding"]
+    sources: ["ClinicalTrials.gov NCT07290244", "Life Biosciences Jun 9 2026: first patient dosed", "Washington Times Jun 16 2026: first-in-human reprogramming dose", "BioWorld Jun 20 2026: ER-100 advances epigenetic reprogramming", "Nature Biotechnology Feb 2026", "BIO Investment Summit Mar 2026: Q4 data readout", "Life Biosciences Apr 8 2026: $80M Series D", "PitchBook Apr 24 2026: $286M total funding"]
   },
   {
     id: "altos",
@@ -39,12 +39,12 @@ const INTERVENTIONS = [
     safety: 3,
     cost: 0,
     mechanismNote: "Cellular rejuvenation via reprogramming. Belmonte lab Cell 2025 paper showed partial reprogramming reverses mesenchymal drift. Oct 2025: gene silencing prevents cellular drift. Berdugo-Vega et al. Neuron Feb 2026 (independent group): partial reprogramming of engram neurons via OSK gene therapy reversed cognitive decline in aged mice and AD models — restored learning/memory to young-animal levels, lending mechanistic support to platform-class.",
-    clinicalNote: "No clinical trials announced. $3B+ funded, 500 employees. CMO Joan Mannick (mTOR expert) in place. Oct 2025 Cell paper: gene silencing prevents cellular drift. Launched Institute of Computation for AI-guided reprogramming. Reportedly seeking to raise $1B additional. Field momentum: NewLimit reached $1.6B post-money valuation Oct 2025 (Eli Lilly investor); Life Biosciences' ER-100 actively dosing in Phase 1 — competitive pressure may accelerate Altos's clinical timeline.",
+    clinicalNote: "No clinical trials announced. $3B+ funded, 500 employees (some reports now cite ~$6B cumulative). CMO Joan Mannick (mTOR expert) in place. Oct 2025 Cell paper: gene silencing prevents cellular drift. Launched Institute of Computation for AI-guided reprogramming. Field momentum accelerating: NewLimit closed $435M Series C June 2, 2026 at $3.1B post-money (Founders Fund lead; Eli Lilly Ventures, Thrive, Greenoaks) — a 3.8x step-up from May 2025 Series B; Life Biosciences dosed first ER-100 patient June 9, 2026. Reprogramming-class capital is now highly concentrated: Retro + NewLimit captured ~94% of disclosed cellular-rejuvenation funding over 24 months (Contrary Research Jun 2026).",
     biomarkerNote: "Published epigenetic clock reversal in multiple in vivo models. Computational models for cellular resilience.",
     safetyNote: "Same class-wide oncogenesis concerns as all reprogramming approaches. No human safety data.",
     costNote: "Not accessible. Research institution only.",
     verdict: "Best-funded lab in longevity. World-class science but no clinical timeline. Still a press release.",
-    sources: ["PitchBook: Altos Labs $3B+", "Labiotech Mar 2026", "Cell Oct 2025", "Berdugo-Vega et al. Neuron Feb 2026 (doi:10.1016/j.neuron.2025.11.028)", "PitchBook Oct 2025: NewLimit $1.6B valuation"]
+    sources: ["PitchBook: Altos Labs $3B+ (cumulative reported ~$6B)", "Labiotech Mar 2026", "Cell Oct 2025", "Berdugo-Vega et al. Neuron Feb 2026 (doi:10.1016/j.neuron.2025.11.028)", "STAT Jun 2 2026: NewLimit $435M Series C at $3.1B", "WSJ Jun 2 2026: NewLimit valuation triples", "Contrary Research Jun 2026: The Anti-Aging Therapeutics Boom"]
   },
   {
     id: "retro",
