@@ -1,4 +1,4 @@
-// Longevity Interventions Database — July 2026 (Updated July 1, 2026)
+// Longevity Interventions Database — August 2026 (Updated August 1, 2026)
 // Scores: 0-10 scale per dimension
 // Composite = Mechanism(0.25) + Clinical(0.25) + Biomarker(0.20) + Safety(0.15) + Cost(0.15)
 
@@ -173,8 +173,8 @@ const INTERVENTIONS = [
     biomarkerNote: "Modulates mTOR/AMPK/autophagy axis. Aging Cell 2026: low-dose rapamycin (1mg/day, 4 months) reduces p21 senescence marker and DNA damage (gammaH2AX) in human immune cells in vivo. However, PEARL trial (n=24 subset) showed NO significant epigenetic clock changes (TruAge) at 48 weeks. Gut dysbiosis signal at 10mg in males.",
     safetyNote: "Known immunosuppressant — infections, mouth ulcers, metabolic effects at transplant doses. Low/intermittent dosing for longevity may mitigate. Requires monitoring.",
     costNote: "Generic available. ~$50-150/month for low-dose. Requires prescription and blood monitoring. Available via longevity clinics.",
-    verdict: "The best-evidenced pharmacological longevity intervention in mice, but two consecutive negative human trials (PEARL and RAPA-EX-01) and a possible muscle-adaptation tradeoff have eroded the clinical case. UT mega-trial is now the make-or-break readout.",
-    sources: ["Moel et al. Aging Apr 2025: PEARL 48-week full results (NCT04488601)", "167-study meta-analysis Aging Cell 2025", "Kell et al. Aging Cell 2026: p21 reduction in vivo", "UT Health San Antonio Mar 2026: NIA-funded rapamycin mega-trial", "Peter Attia review May 2 2026: RAPA-EX-01 trial analysis", "RAPA-EX-01 (n=40, 65-85yr, 13wk): rapamycin blunted exercise gains"]
+    verdict: "The best-evidenced pharmacological longevity intervention in mice — Lamming's July 2026 GeroScience review reaffirms rapamycin as the most reproducible pharmacological geroprotector across model organisms — but two consecutive negative human trials (PEARL and RAPA-EX-01) and a possible muscle-adaptation tradeoff have eroded the clinical case. UT mega-trial is now the make-or-break readout.",
+    sources: ["Moel et al. Aging Apr 2025: PEARL 48-week full results (NCT04488601)", "167-study meta-analysis Aging Cell 2025", "Kell et al. Aging Cell 2026: p21 reduction in vivo", "UT Health San Antonio Mar 2026: NIA-funded rapamycin mega-trial", "Peter Attia review May 2 2026: RAPA-EX-01 trial analysis", "RAPA-EX-01 (n=40, 65-85yr, 13wk): rapamycin blunted exercise gains", "Lamming GeroScience Jul 2026 (doi:10.1007/s11357-026-02306-8): bench-to-bedside review reaffirms rapamycin as most reproducible geroprotector"]
   },
   {
     id: "metformin",
